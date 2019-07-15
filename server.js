@@ -26,11 +26,12 @@ app.listen(3000, function () {
 
 app.post('/', function (req, res) {
 
-	var str = req.body.sigRawData;
-	var cedula = req.body.cedula_doc;
-	var sql = "INSERT INTO doctor (firma) VALUES (str) WHERE ced_doc = cedula"; //Query para instar la firma en la DB (Este es uno de prueba, usado para la presentacion del sistema.)
-	con.query(sql, function (err, result) {
-	if (err) throw err;
+	//var str = req.body.sigRawData;
+	//var cedula = req.body.cedula_doc;
+	//var sql = "INSERT INTO doctor (firma) VALUES (str) WHERE ced_doc = cedula"; //Query para instar la firma en la DB (Este es uno de prueba, usado para la presentacion del sistema.)
+	//con.query(sql, function (err, result) {
+	//if (err) throw err;
+	res.render('index');
 	console.log("1 record inserted");
-	});  
+	//});  
 })
